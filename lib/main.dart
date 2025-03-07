@@ -11,6 +11,7 @@ class FigmaToCodeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+<<<<<<< HEAD
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
@@ -19,10 +20,19 @@ class FigmaToCodeApp extends StatelessWidget {
           Iphone16Pro1(),
         ]),
       ),
+=======
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+>>>>>>> origin/main
     );
   }
 }
 
+<<<<<<< HEAD
 class Iphone16Pro1 extends StatelessWidget {
   const Iphone16Pro1({super.key});
 
@@ -956,6 +966,50 @@ class Iphone16Pro1 extends StatelessWidget {
           ),
         ),
       ],
+=======
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int counter = 0;
+
+  void incrementCounter() {
+    setState(() {
+      counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text('Buttons'),
+            Text(
+              '$counter',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
+>>>>>>> origin/main
     );
   }
 }
